@@ -1,10 +1,13 @@
 const Article = require('../models/article')
 
 module.exports = {
-    
-    add: (req, res) => {
+
+    allArticle: (req, res) => {
         Article.find({}, (error, articleList) => {
-            res.send({name: articleList})
+            if(error) {
+                return console.log(error);
+            }
+            res.send({status: 1000, infoemation: null, articleList: articleList})
         })
     }
 }

@@ -5,9 +5,6 @@ const Category = require('../app/controllers/category');
 
 module.exports = function(app) {
 
-  app.use('/admin', Article.add)
-  
-
   app.use('/api/display/carouselList', Carousel.list)
 
 
@@ -15,4 +12,7 @@ module.exports = function(app) {
 
 
   app.use('/api/display/categoryList', Category.list)
+
+
+  app.use('/api/display/allArticle', Article.allArticle)
 }

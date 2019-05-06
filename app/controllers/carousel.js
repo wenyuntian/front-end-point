@@ -9,5 +9,7 @@ module.exports = {
             }
             res.send({status: 1000, infoemation: null, carouselList: carouselList})
         })
-    }
+    },
+
+    
 }
